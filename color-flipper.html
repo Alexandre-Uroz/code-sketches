@@ -40,6 +40,13 @@
 			theColor = `rgb(${R}, ${V}, ${B})`;
 
 			body.style.backgroundColor = theColor;
+
+			if( R+V+B < 400){
+				body.style.color= "white";
+			}
+			else{
+				body.style.color = "black";
+			}
 		}
 	</script>
 </body>

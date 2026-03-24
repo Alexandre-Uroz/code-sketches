@@ -18,12 +18,28 @@
 	<button onclick="setColor('peachpuff')">Peach Puff</button>
 	<button onclick="setColor('powderblue')">Powder Blue</button>
 
+	<button onclick="randomColor()">Random</button>
+
 	<script>
 		const body = document.getElementsByTagName("body")[0];
 		//body.style.backgroundColor = "papayawhip";
 		setColor("papayawhip")
 		function setColor(name){
 			body.style.backgroundColor = name;
+		}
+		function randomColor(){
+			//console.log("hi");
+			let R = Math.round( Math.random() * 255 );
+			let V = Math.round( Math.random() * 255 );
+			let B = Math.round( Math.random() * 255 );
+
+			//plus chiant
+			let theColor = "rgb(" + R + "," + V + "," + B + ")";
+
+			//plus élégant
+			theColor = `rgb(${R}, ${V}, ${B})`;
+
+			body.style.backgroundColor = theColor;
 		}
 	</script>
 </body>

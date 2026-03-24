@@ -14,12 +14,17 @@
 	<h1>
 		We can flippin da colors !
 	</h1>
-	<button>Papaya-Whip</button>
-	<button>Peach Puff</button>
-	<button>Powder Blue</button>
+	<button onclick="setColor('papayawhip')">Papaya Whip</button>
+	<button onclick="setColor('peachpuff')">Peach Puff</button>
+	<button onclick="setColor('powderblue')">Powder Blue</button>
 
 	<script>
-		
+		const body = document.getElementsByTagName("body")[0];
+		//body.style.backgroundColor = "papayawhip";
+		setColor("papayawhip")
+		function setColor(name){
+			body.style.backgroundColor = name;
+		}
 	</script>
 </body>
 </html>

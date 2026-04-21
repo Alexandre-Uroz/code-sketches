@@ -18,38 +18,38 @@
 	</div>
 
 	<script>
-		//console.clear();
-		//console.log("Bonjour !");
 
 		const theFeedback = document.getElementById("feedback");
-		theFeedback.innerHTML = "blabla truc muche"
+		theFeedback.innerHTML = "write your question"
 
 		const theButton = document.getElementById("theButton");
 		theButton.addEventListener("click", checkTheText);
 
 		function checkTheText(){
-			//console.log("we are checking the text")
 
 			const theInput = document.getElementById("inputString");
-			console.log(theInput.value)
 
-			checkPalindrome(theInput.value)
 			if(theInput.value == "machin"){
-				console.log("yes.");
 				theFeedback.innerHTML = "Error: input is a thing";
 			}
+			else if ( theInput.value == ""){
+				theFeedback.innerHTML = "Fill in the form, dummy.";
+			}
 			else if ( checkPalindrome(theInput.value) == true){
-				console.log("yes.");
-				theFeedback.innerHTML = "Yes!" + input.value + "is a palindrome";
+				theFeedback.innerHTML = "Yes, " + theInput.value + " is a palindrome";
 			}
 			else{
-				console.log("no.");
-				theFeedback.innerHTML = "No." + input.value + "is not a palindrome";
+				theFeedback.innerHTML = "No, " + theInput.value + " is not a palindrome";
 			}
+
+			theInput.value = ""; //vider après usage
 		}// checkTheText
 
 		function checkPalindrome(str){
-			console.log("palindrome check : " + str);
+
+			str = str.replaceAll(" ", "")
+			str = str.toLowerCase();
+			str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
 			let theLetters = str.split("");
 			let verlan = theLetters.reverse();

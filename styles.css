@@ -1,4 +1,27 @@
 body{
 	font-family: system-ui;
-	background-color: #F1357A;
+	font-weight: 100;
+	max-width: 400px;
+	margin: auto;
+}
+
+*{ font-weight: inherit;}
+
+/*navigation*/
+nav ul{ list-style-type: none; padding: 0; }
+nav li{ margin-top: 1rem; }
+
+a {color: inherit;}
+
+a {
+	text-decoration-style: wavy;
+	text-decoration-thickness: 2px;
+	text-decoration-color: #f1357a;
+	text-decoration-skip-ink: none;
+	text-underline-offset: 0.25em;
+}
+
+a:hover {
+	background-color: #f1357a;
+	color: white;
 }

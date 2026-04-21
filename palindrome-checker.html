@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Palindrome Checker</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="projectNav"><a href="index.html">Home</a></div>
+
+	<h1>We can check the words!</h1>
+
+	<div id="UI">
+		<input type="text" id="inputString" placeholder="back words?">
+		<button id="theButton">Check</button>
+		<p id="feedback">the feedback here…</p>
+	</div>
+
+	<script>
+		//console.clear();
+		//console.log("Bonjour !");
+
+		const theFeedback = document.getElementById("feedback");
+		theFeedback.innerHTML = "blabla truc muche"
+
+		const theButton = document.getElementById("theButton");
+		theButton.addEventListener("click", checkTheText);
+
+		function checkTheText(){
+			//console.log("we are checking the text")
+
+			const theInput = document.getElementById("inputString");
+			console.log(theInput.value)
+
+			checkPalindrome(theInput.value)
+			if(theInput.value == "machin"){
+				console.log("yes.");
+				theFeedback.innerHTML = "Error: input is a thing";
+			}
+			else if ( checkPalindrome(theInput.value) == true){
+				console.log("yes.");
+				theFeedback.innerHTML = "Yes!" + input.value + "is a palindrome";
+			}
+			else{
+				console.log("no.");
+				theFeedback.innerHTML = "No." + input.value + "is not a palindrome";
+			}
+		}// checkTheText
+
+		function checkPalindrome(str){
+			console.log("palindrome check : " + str);
+
+			let theLetters = str.split("");
+			let verlan = theLetters.reverse();
+			let rts = verlan.join("");
+
+			console.log(rts)
+
+			if(str == rts){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+
+	</script>
+</body>
+</html>

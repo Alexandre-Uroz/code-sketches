@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Oblique strategies</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1 id="Strategy">…</h1>
+
+	<script src="oblique-stratiges.js"></script>
+	<script>
+
+		window.onload = function(){
+			let strategy = document.getElementById("Strategy");
+
+			// version 1
+			// strategy.innerHTML = "Hello,";
+
+			// const Strategies = [
+			// 	"Chaton", // 0
+			// 	"Loutre", // 1
+			// 	"Chèvre", // 2
+			// 	"Ornithorynque", // 3
+			// 	"Renard", // 4
+			// 	"Dragonneau" // 5
+			// ];
+
+			// if(Math.random() > 0.5 ){
+			// 	strategy.innerHTML = "World.";
+			// }
+
+			// let total = Strategies.length;
+			// let rando = Math.random();
+			// let hasard = rando * total;
+			// let choix = Math.floor(hasard);
+			//strategy.innerHTML = Strategies[  ];
+
+			strategy.innerHTML = Strategies[ Math.floor(Math.random() * Strategies.length) ];
+
+		}
+
+	</script>
+
+	<style>
+		body{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			min-height: 80vh;
+			background-color: #eee;
+		}
+		#Strategy{
+			font-size: clamp(1rem, 4vw, 12rem);
+			font-weight: 400;
+
+			width: 20ch;
+			aspect-ratio: 16/9;
+
+			padding: 1rem;
+			background-color: #fff;
+			border: 1px solid #666;
+			border-radius: 1rem;
+			box-shadow: 0.2rem 0.3rem 1rem #0003;
+		}
+		button { opacity: 0.3;}
+		button:hover {opacity: 1;}
+	</style>
+
+	<button onclick="window.location.reload()">⌘&thinsp;R</button>
+</body>
+</html>

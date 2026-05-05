@@ -20,16 +20,36 @@
 		<a href="pages/damier.html">
 			<img src="images/checker.png" alt="">
 		</a>
+		<a href="pages/waterdrop.html">
+			<img src="images/waterdrop.png" alt="">
+		</a>
+		<a href="pages/flag.html">
+			<img src="images/flag.png" alt="">
+		</a>
 	</div>
 	<div class="lb" id="lb" aria-hidden="true">
 		<button type="button" aria-label="Fermer">×</button>
 		<iframe allow="camera; microphone; autoplay"></iframe>
 	</div>
 	<style>
-		.lb { position: fixed; inset: 0; background: rgba(0,0,0,.85); display: none; z-index: 9999; }
+		.lb {
+			position: fixed;
+			inset: 0;
+			background: rgba(0,0,0,.85);
+			display: none; z-index: 9999;
+		}
 		.lb.open { display: block; }
-		.lb iframe { position: absolute; top: 5vh; left: 5vw; width: 90vw; height: 90vh; border: 0; background: #fff; }
-		.lb button { position: absolute; top: 1rem; right: 1rem; width: 3rem; height: 3rem; font-size: 1.5rem; background: #fff; border: 0; cursor: pointer; }
+		.lb iframe {
+			position:
+			absolute;
+			top: 5vh;
+			left: 5vw;
+			width: 90vw;
+			height: 90vh;
+			border: 0;
+			background: #fff;
+		}
+		.lb button {z-index: 99; position: absolute; top: 1rem; right: 1rem; width: 3rem; height: 3rem; font-size: 2rem; background: #fff; border: 0; border-radius: 1rem; cursor: pointer; }
 	</style>
 	<script>
 	 function makeLightbox(){

@@ -1,11 +1,13 @@
 body{
 	font-family: system-ui;
 	font-weight: 100;
-	max-width: 400px;
+	/* max-width: 400px; */
 	margin: auto;
 }
 
 *{ font-weight: inherit;}
+
+img{max-width: 100%;}
 
 /*navigation*/
 nav ul{ list-style-type: none; padding: 0; }
@@ -25,3 +27,18 @@ a:hover {
 	background-color: #f1357a;
 	color: white;
 }
+
+/* gallery */
+
+.gallery{
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(
+			min(180px, 100%), 1fr
+		)
+	);
+}
+
+.gallery a {display: block;}

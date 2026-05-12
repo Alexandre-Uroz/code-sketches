@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(400, 400);
-  frameRate(1);
+  frameRate(5);
 }
 
 var size = 10;
